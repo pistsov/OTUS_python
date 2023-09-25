@@ -5,8 +5,8 @@ services:
     image: postgres
     environment:
       POSTGRES_DB: postgres
-      POSTGRES_USER: username
-      POSTGRES_PASSWORD: passwd
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: secretpassword
       PGUSER: postgres
       USER: postgres
       PGDATA: /var/lib/postgresql@15/data/pgdata
