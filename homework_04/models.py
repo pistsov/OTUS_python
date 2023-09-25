@@ -9,8 +9,8 @@ from sqlalchemy import (
 from sqlalchemy.orm import relationship, declarative_base, sessionmaker
 from sqlalchemy.ext.asyncio import create_async_engine, AsyncSession
 
-DB_URL = "postgresql+pg8000://postgres:password@0.0.0.0:5432/postgres"
-ASYNC_DB_URL = "postgresql+asyncpg://postgres:password@0.0.0.0:5432/postgres"
+DB_URL = "postgresql+pg8000://username:passwd@0.0.0.0:5432/postgres"
+ASYNC_DB_URL = "postgresql+asyncpg://username:passwd@0.0.0.0:5432/postgres"
 DB_ECHO = False
 # DB_ECHO = True
 
