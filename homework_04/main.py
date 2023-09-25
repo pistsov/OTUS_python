@@ -15,7 +15,6 @@
 import asyncio
 
 import crud
-import time
 from models import Base, engine, async_engine, Session
 from jsonplaceholder_requests import fetch_users, fetch_posts
 
@@ -36,7 +35,6 @@ async def async_main():
 
 
 def main():
-    time.sleep(0.01)
     asyncio.run(async_main())
 
 
