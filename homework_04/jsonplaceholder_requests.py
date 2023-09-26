@@ -3,8 +3,8 @@
 """
 from aiohttp import ClientSession
 
-USERS_DATA_URL = "http://jsonplaceholder.typicode.com/users/"
-POSTS_DATA_URL = "http://jsonplaceholder.typicode.com/posts/"
+USERS_DATA_URL = "https://jsonplaceholder.typicode.com/users/"
+POSTS_DATA_URL = "https://jsonplaceholder.typicode.com/posts/"
 
 
 async def fetch_json(url: str) -> dict:
