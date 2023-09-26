@@ -15,7 +15,7 @@
 import asyncio
 
 import crud
-from models import Base, engine, async_engine, Session
+from models import Base, async_engine, Session
 from jsonplaceholder_requests import fetch_users, fetch_posts
 
 
