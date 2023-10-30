@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "homework-06"
+version = "0.1.0"
+description = ""
+authors = ["n.pistsov <n.pistsov@ritm.media>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+flask = "^2.3.3"
+flask-migrate = "^4.0.5"
+flask-wtf = "^1.2.1"
+aiohttp = "^3.8.6"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
