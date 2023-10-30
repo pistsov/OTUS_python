@@ -6,7 +6,7 @@ from flask_migrate import Migrate
 
 import crud
 from jsonplaceholder_requests import fetch_users, fetch_posts
-from models import db, Post, User
+from models import db
 from views.posts import posts_app
 from views.users import users_app
 
