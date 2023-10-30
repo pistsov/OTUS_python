@@ -1,15 +1,11 @@
 from models import User, Post, db
 
 
-def create_user(
-    username: str,
-    name: str,
-    email: str
-) -> User:
+def create_user(name: str, username: str, email: str = None) -> User:
     user = User(name=name, username=username, email=email)
-
     db.session.add(user)
     db.session.commit()
+    return user
 
 
 def get_users() -> list[User]:
@@ -36,9 +32,9 @@ def create_post(post_title: str, post_body: str, user_id: User) -> Post:
         body=post_body,
         user_id=user_id,
     )
-
     db.session.add(post)
     db.session.commit()
+    return post
 
 
 def get_posts() -> list[Post]:

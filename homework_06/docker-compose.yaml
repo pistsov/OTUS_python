@@ -18,15 +18,6 @@ services:
     image: postgres
     env_file:
       - ./pg.env
-#    environment:
-#      POSTGRES_DB: blog
-#      POSTGRES_USER: username
-#      POSTGRES_PASSWORD: passwd
-#      PGDATA: /var/lib/postgresql/data/pgdata
-#      PGUSER: postgres
-#      user: postgres
-#    ports:
-#      - "5432:5432"
     volumes:
       - db-data:/var/lib/postgresql/data/pgdata
     healthcheck:
