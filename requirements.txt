@@ -14,7 +14,6 @@ CacheControl==0.12.14
 certifi==2023.5.7
 cffi==1.15.1
 chardet==5.2.0
-charset-normalizer==3.3.1
 cleo==2.0.1
 click==8.1.7
 config==0.5.1
