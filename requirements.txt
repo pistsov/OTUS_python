@@ -103,3 +103,4 @@ WTForms==3.1.0
 xattr==0.10.1
 yarl==1.9.2
 zipp==3.16.2
+Django~=4.2.7
