@@ -19,19 +19,13 @@
 ### Проект трекер калорий
 
 - models:
-  1. product,
-  2. Post
+  1. profile,
+  2. product
 - pages:
   1. home
   2. products,
      - list
      - details
-     - edit
-     - delete
-     - create
   3. profiles:
      - list
      - details
-     - edit
-     - delete
-     - create
