@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "robinbobin"
+version = "0.1.0"
+description = ""
+authors = ["n.pistsov <n.pistsov@ritm.media>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+Django = "^4.2.7"
+django-debug-toolbar = "^4.2.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
