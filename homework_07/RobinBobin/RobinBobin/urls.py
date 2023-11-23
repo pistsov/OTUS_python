@@ -1,8 +1,7 @@
-"""
-URL configuration for wishlist project.
+"""zoo URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/4.2/topics/http/urls/
+    https://docs.djangoproject.com/en/3.2/topics/http/urls/
 Examples:
 Function views
     1. Add an import:  from my_app import views
@@ -16,7 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+import mainapp.views as mainapp
+
 
 urlpatterns = [
-    path("admin/", admin.site.urls),
+    path('', mainapp.index),
+    path('admin/', admin.site.urls),
+    path("profiles/", mainapp.profiles_list, name="profiles"),
+    path("profiles/<int:profile_id>/", mainapp.get_profile_by_id, name="profile"),
+    path("products/", mainapp.products_list, name="products"),
+    path("products/<int:product_id>/", mainapp.get_product_by_id, name="product"),
 ]

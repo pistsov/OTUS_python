@@ -1,0 +1,20 @@
+{% extends 'root.html' %} 
+{% block title %} Users {% endblock %} 
+{% block body%}
+<h2>Profiles list</h2>
+
+<ul>
+  {% for profile in profiles %}
+  <li>
+    name:     
+    <a
+      href="{% url 'profile' profile.id %}">{{ profile.name }}</a>;
+    username: {{ profile.username }}
+  </li>
+  {% endfor %}
+</ul>
+    {% comment %} <div class="my-2">
+        <a class="btn btn-primary" href="#">Add profile</a>
+      </div>  {% endcomment %}
+
+{% endblock %}
