@@ -1,0 +1,14 @@
+{% extends 'root.html' %} 
+{% block title %} Products {% endblock %}
+
+ {% block body%}
+<h2>Products list</h2>
+
+<ul>
+  {% for product in products %}
+  <li>
+    name: <a href="{% url 'product' product.pk %}">{{ product.name }}</a>;
+  </li>
+  {% endfor %}
+</ul>
+{% endblock%}
