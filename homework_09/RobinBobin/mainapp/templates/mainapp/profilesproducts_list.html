@@ -7,8 +7,9 @@
 <ul>
   {% for profilesproducts in profilesproducts_list %}
   <li>
+    profile: <a href="{% url 'profile' profilesproducts.profile_id %}">{{ profilesproducts.profile.username }}</a>;
     date: {{ profilesproducts.eat_date }}
-    name: <a href="{% url 'profilesproducts' profilesproducts.id %}">{{ profilesproducts.name }}</a>;
+    eating: <a href="{% url 'profilesproducts' profilesproducts.id %}"> {{ profilesproducts.name }}</a>;
   </li>
   {% endfor %}
 </ul>
