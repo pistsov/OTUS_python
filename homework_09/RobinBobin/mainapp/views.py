@@ -3,8 +3,8 @@ from django.shortcuts import render
 from django.http import HttpRequest, HttpResponse
 from django.views.generic import ListView, DetailView, CreateView
 from django.urls import reverse_lazy
-from .models import Profile, Product
-from .forms import ProfileCreateForm, ProductCreateForm
+from .models import Profile, Product, ProfilesProducts
+from .forms import ProfileCreateForm, ProductCreateForm, ProfilesProductsCreateForm
 
 # Create your views here.
 
@@ -21,7 +21,6 @@ class ProfilesList(ListView):
 
     def get_context_data(self, **kwargs: Any) -> dict[str, Any]:
         context = super().get_context_data(**kwargs)
-        context['name'] = "Profiles list"
         return context
 
 
@@ -44,8 +43,6 @@ class ProductsList(ListView):
 
     def get_context_data(self, **kwargs: Any) -> dict[str, Any]:
         context = super().get_context_data(**kwargs)
-        context['products_list'] = "Products list"
-        context['title'] = "Products list"
         return context
 
 
@@ -61,3 +58,25 @@ class ProductsCreate(CreateView):
     model = Product
     form_class = ProductCreateForm
     success_url = reverse_lazy('products')
+
+
+class ProfilesProductsList(ListView):
+    model = ProfilesProducts
+
+    def get_context_data(self, **kwargs: Any) -> dict[str, Any]:
+        context = super().get_context_data(**kwargs)
+        return context
+
+
+class ProfilesProductsDetail(DetailView):
+    model = ProfilesProducts
+
+    def get_context_data(self, **kwargs: Any):
+        context = super().get_context_data(**kwargs)
+        return context
+
+
+class ProfilesProductsCreate(CreateView):
+    model = ProfilesProducts
+    form_class = ProfilesProductsCreateForm
+    success_url = reverse_lazy('profilesproducts')

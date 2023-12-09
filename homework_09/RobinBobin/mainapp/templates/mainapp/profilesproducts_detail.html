@@ -1,0 +1,20 @@
+{% extends 'root.html' %} 
+{% block title %} 
+Profile with products: {{ profilesproducts.name}}
+{% endblock %}
+
+{% block body %}
+<h2>Profiles with products: {{profilesproducts.name}}</h2>
+
+<div>
+  <div>
+    <div>date: {{ profilesproducts.eat_date }}</div>
+    <div>name: {{ profilesproducts.name }}</div>
+    <div>profile_id: {{ profilesproducts.profile_id }}</div>
+    <div>product_id: {{ profilesproducts.product_id }}</div>
+</div>
+  </div>
+</div>
+
+</div>
+{% endblock %}

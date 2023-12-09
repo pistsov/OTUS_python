@@ -1,13 +1,12 @@
 {% extends 'root.html' %} 
-{% block title %} Posts {% endblock %}
-
+{% block title %} Products {% endblock %}
  {% block body%}
 <h2>Product list</h2>
 
 <ul>
   {% for product in product_list %}
   <li>
-    title: <a href="{% url 'product' product.pk %}">{{ product.name }}</a>;
+    name: <a href="{% url 'product' product.pk %}">{{ product.name }}</a>;
   </li>
   {% endfor %}
 </ul>

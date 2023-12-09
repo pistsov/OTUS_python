@@ -1,5 +1,6 @@
 {% extends 'root.html' %} 
-{% block title %} 
+{% block title %}
+Profiles
 {{ title }} 
 {% endblock %} 
 
@@ -8,9 +9,8 @@
 <ul>
   {% for profile in profile_list %}
   <li>
-    name: {{ profile.name }}
-    <a href="{% url 'profile' profile.id %}">{{ profile.name }}</a>; 
-    username: {{profile.username }}
+    name: <a href="{% url 'profile' profile.id %}">{{ profile.name }}</a>;
+    username: {{ profile.username }}
   </li>
   {% endfor %}
 </ul>
