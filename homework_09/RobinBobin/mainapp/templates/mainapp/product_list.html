@@ -1,0 +1,17 @@
+{% extends 'root.html' %} 
+{% block title %} Posts {% endblock %}
+
+ {% block body%}
+<h2>Product list</h2>
+
+<ul>
+  {% for product in product_list %}
+  <li>
+    title: <a href="{% url 'product' product.pk %}">{{ product.name }}</a>;
+  </li>
+  {% endfor %}
+</ul>
+<div class="my-2">
+  <a class="btn btn-primary" href="{% url 'add_product' %}">Add product</a>
+</div>
+{% endblock%}
