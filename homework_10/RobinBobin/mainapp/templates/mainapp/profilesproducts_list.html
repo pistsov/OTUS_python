@@ -1,0 +1,19 @@
+{% extends 'root.html' %}
+{% block title %} Profiles with products {% endblock %}
+
+ {% block body%}
+<h2>Profiles with products list</h2>
+
+<ul>
+  {% for profilesproducts in profilesproducts_list %}
+  <li>
+    profile: <a href="{% url 'profile' profilesproducts.profile_id %}">{{ profilesproducts.profile.username }}</a>;
+    date: {{ profilesproducts.eat_date }}
+    eating: <a href="{% url 'profilesproducts' profilesproducts.id %}"> {{ profilesproducts.name }}</a>;
+  </li>
+  {% endfor %}
+</ul>
+<div class="my-2">
+  <a class="btn btn-primary" href="{% url 'add_profilesproducts' %}">Add profiles with products</a>
+</div>
+{% endblock%}

@@ -1,0 +1,14 @@
+{% extends 'root.html' %} 
+{% block title %} 
+Product: {{ product.name}}
+{% endblock %}
+
+{% block body %}
+<h2>Product: {{product.title}}</h2>
+
+<div>
+  <div>
+    <div>name: {{ product.name }}</div>
+    <div>ccal: {{ product.ccal }}</div>
+  </div>
+{% endblock %}
