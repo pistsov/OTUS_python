@@ -23,5 +23,5 @@ jobs:
         pip install -r requirements.txt
     - name: Run Tests
       run: |
-        cd RobinBobin
+        cd homework_10/RobinBobin
         python manage.py test
